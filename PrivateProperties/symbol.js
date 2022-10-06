@@ -1,3 +1,4 @@
+"use strict";
 /**
  * The properties are private and can not be reassigned.
  * Symbol is a primitive data type in JavaScript and it's unique, there is noway to get the nameKey and ageKey.
@@ -26,8 +27,18 @@ function Person(name, age) {
   };
 }
 
-var p = new Person("John", 20);
+const p2 = new Person("Josh2", 10);
+p2.name = "Danny";
 
-p.name = "DAniel";
+const frozenPerson = Object.freeze(new Person("John", 20));
 
-console.log(p.getName());
+// freezingPerson.name = "Dannyhihi";
+
+// frozenPerson.setName("Unfreesed");
+// console.log(frozenPerson, p2);
+
+const sealedPerson = Object.seal(new Person("Seal1", 10));
+// sealedPerson.name = "Seal2";
+sealedPerson.setName("seal 2");
+
+console.log("seal after set", sealedPerson);
