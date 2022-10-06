@@ -28,7 +28,3 @@
 
 7 directories, 12 files
 ```
-
-## TODO
-
-- Config precommit to automatically modify the directory tree
