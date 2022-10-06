@@ -1,3 +1,4 @@
+"use strict";
 /**
  * The properties are private and can not be reassigned.
  * I'm using a closure to store the state as React does. :D
@@ -28,4 +29,15 @@ function Person(name, age) {
   };
 }
 
-const p = new Person("John", 20);
+// const p = new Person("John", 20);
+
+let freezingPerson = Object.freeze(new Person("John", 20));
+let p2 = new Person("Josh2", 10);
+
+// freezingPerson.name = "Dannyhihi";
+p2.name = "Danny";
+
+frozenPerson.setName("Unfreesed");
+
+// console.log(freezingPerson, p2);
+console.log(frozenPerson.getName());
